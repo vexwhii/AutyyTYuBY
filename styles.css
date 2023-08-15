@@ -28,8 +28,44 @@ header {
 }
 
 .info-item {
-    background-color: #f3f3f3;
+    background-color: #f3f3f3 ;
     padding: 10px;
     border-radius: 5px;
+    border-color: black;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.info-item.revealable {
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.info-item.revealable:hover {
+    background-color: #e0e0e0;
+}
+
+.hidden {
+    display: none;
+}
+
+.revealed {
+    display: inline;
+}
+.gradient-text {
+    background: linear-gradient(45deg, rgb(0, 162, 255), rgb(64, 174, 218), rgb(189, 203, 223));
+    background-size: 200%;
+    color: transparent;
+    -webkit-background-clip: text;
+    animation: rainbow-animation 5s linear infinite;
+}
+.no{
+    user-select: none;
+}
+@keyframes rainbow-animation {
+    0% {
+        background-position: 50% 100%;
+    }
+    100% {
+        background-position: -150% 0, 250% 0;
+    }
 }
