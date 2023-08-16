@@ -6,4 +6,3 @@ revealableElements.forEach(element => {
         hiddenElement.classList.toggle('revealed');
     });
 });
-
